@@ -1,0 +1,27 @@
+.virtual-scroll-3 {
+  display: block;
+  position: relative;
+  transform: translateZ(0);
+  overflow: auto;
+  contain: strict;
+  will-change: scroll-position;
+  -webkit-overflow-scrolling: touch;
+
+  .virtual-scroll-3_content-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    contain: content;
+  }
+
+  .virtual-scroll-3_spacer {
+    // TODO: z-index
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    transform-origin: 0 0;
+  }
+}

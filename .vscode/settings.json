@@ -1,0 +1,10 @@
+{
+  "git.ignoreLimitWarning": true,
+  "npm.enableScriptExplorer": true,
+  "editor.formatOnSave": true,
+  "tslint.run": "onSave",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "emmet.includeLanguages": {
+    "typescriptreact": "html"
+  }
+}

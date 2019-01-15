@@ -1,0 +1,32 @@
+// @import '~modern-normalize/modern-normalize.css';
+
+html {
+  /*----------  font  ----------*/
+
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+
+  .button,
+  button {
+    outline: none;
+    &:active {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'SF Pro SC', 'SF Pro Display', 'SF Pro Icons', 'PingFang SC',
+    'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

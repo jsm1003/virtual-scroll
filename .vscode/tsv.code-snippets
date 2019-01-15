@@ -1,0 +1,23 @@
+{
+  "Create typescript vue component": {
+    "prefix": ["tsv"],
+    "body": [
+      "import {",
+      "  Component,",
+      "  Vue,",
+      "  Prop,",
+      "  Inject,",
+      "  Model,",
+      "  Provide,",
+      "  Watch,",
+      "} from 'vue-property-decorator';",
+      "import { CreateElement } from 'vue';",
+      "",
+      "@Component",
+      "export class ${1:Component} extends Vue {",
+      "}"
+    ],
+    "description": "Create typescript vue component",
+    "scope": "typescriptreact"
+  }
+}

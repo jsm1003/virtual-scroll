@@ -1,0 +1,29 @@
+$rise-duration: 200ms;
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.rise-fade-enter-active {
+  transition: all $rise-duration ease-in-out $rise-duration;
+}
+
+.rise-fade-leave-active {
+  transition: all $rise-duration ease-in-out;
+}
+
+.rise-fade-enter {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.rise-fade-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}

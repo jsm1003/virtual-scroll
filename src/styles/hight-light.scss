@@ -1,0 +1,16 @@
+@import '~@/assets/atom-onelight';
+
+code {
+  // color: #c7254e;
+  // background-color: #f9f2f4;
+  // border-radius: 4px;
+  // white-space: normal;
+}
+
+section pre {
+  padding: 10px;
+  margin-bottom: 10px;
+  overflow: auto;
+  background-color: #f7f7f7;
+  -webkit-overflow-scrolling: touch;
+}

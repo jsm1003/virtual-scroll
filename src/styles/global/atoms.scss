@@ -1,0 +1,90 @@
+@mixin text-overflow($line: 1) {
+  @if $line >= 2 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  } @else {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+// @mixin flex-center($flex: 'flex') {
+//   display: $flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+@mixin overlay($position: absolute, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  // TODO
+}
+
+@mixin one-pixel($color: $border-color, $border: bottom, $pseudo: after) {
+  position: relative;
+
+  &::#{$pseudo} {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: $color;
+
+    @if $border == 'bottom' {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      transform: scaleY(0.5);
+    }
+
+    @if $border == 'top' {
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      transform: scaleY(0.5);
+    }
+
+    @if $border == 'left' {
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      transform: scaleX(0.5);
+    }
+
+    @if $border == 'right' {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      transform: scaleX(0.5);
+    }
+  }
+}
+
+@mixin one-Pixel-all($color, $border-radius: 0) {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    transform: scale(0.5);
+    transform-origin: left top;
+    border: 1px $color solid;
+    @if ($border-radius > 0) {
+      border-radius: #{$border-radius * 2}px;
+    }
+  }
+}
